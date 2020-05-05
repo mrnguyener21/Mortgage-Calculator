@@ -1,0 +1,26 @@
+https://www.mortgagecalculator.org/
+
+App
+-inputs(home value, downpayment, loan term, interest rate, property tax)
+
+components
+-loan amount(home value - downpayment)
+-property tax(in $)
+    -just gotta multiply te property tax input by 100
+-pmi(if less than 20%, pmi will be 1% of entire loan amount on annual basis)
+    -downPayment < 20? loan amount * 1% until 20% of home payment has been made 
+-total monthly payment
+    -[(principal + intest + taxes and fee divide)/30]/12
+-down payment(in $)
+    -(down payment * home value)*100
+-total interest paid
+-total tax paid
+-balance
+    -how much prnicipal is left
+-chart
+    -a mixed graph where thar shows taxes fee interest and principal where the line graph shows the current amount for each year along with other details such as tax paid that year etc
+    -possibly add a loan break down doughnut chart
+
+NOTES
+- im going to need to for loop until years are 30
+-im going to need a for loop for each components that 
