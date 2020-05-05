@@ -1,5 +1,8 @@
 https://www.mortgagecalculator.org/
 https://www.bankrate.com/calculators/mortgages/mortgage-calculator.aspx
+https://mozo.com.au/interest-rates/guides/calculate-interest-on-loan
+
+NOTES FOR LAYOUT OF PROJECT
 App
 -inputs(home value, downpayment, loan term, interest rate)
 
@@ -9,6 +12,7 @@ components
     -just gotta multiply te property tax input by 100
     -total
     -per year
+    
 
 -total monthly payment
     -[(principal + intest + taxes and fee divide)/30]/12
@@ -18,7 +22,8 @@ components
     -total
     =per year
     -pmi(if less than 20%, pmi will be 1% of entire loan amount on annual basis)
-    -downPayment < 20? loan amount * 1% until 20% of home payment has been made 
+        -downPayment < 20? loan amount * 1% until 20% of home payment has been made 
+    -interest rate is only based off of the loan principal
 -balance
     -how much prnicipal is left
 -chart
@@ -29,3 +34,16 @@ NOTES
 - im going to need to for loop until years are 30
 -im going to need a for loop for each components that 
 anything that needs a for loop to be compounded over the loan term will be given its own component
+
+COMPONENTS THAT NEEDS THE LOAN TERM 
+-property tax
+
+
+NOTES ON FORMULA / UNDERSTANDING HOW TO GET THE CORRECT NUMBERS
+
+MONTHLY INTEREST RATE  FORMULA : total monthly mortgage payment
+    -principal[interest rate(1+interest rate)^number of payments / ((1+interest rate)^number of payments) - 1))]
+
+INTEREST RATE FORMULA   
+    -(interst rate / 12(12 months in a year) * balance)
+    -the balance will change each year as it gets smaller and smaller so the interest will change with it to correct reflect the new balance

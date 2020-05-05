@@ -24,7 +24,7 @@ const App =() => {
         <MonthlyPayment/>
         <Tax taxrate={taxRate}/>
         <Interest interestRate={interestRate}/>
-        <Balance/>
+        <Balance/>// 
         <Chart/>
       </div>
     </div>
